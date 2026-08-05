@@ -1,46 +1,51 @@
 body{
     margin:0;
-    padding:0;
     background:#E8F5E9;
     font-family:"Yu Gothic","Meiryo",sans-serif;
 }
 
 .container{
+    width:90%;
     max-width:500px;
     margin:40px auto;
-    padding:20px;
     text-align:center;
 }
 
 h1{
     color:#2E7D32;
     font-size:42px;
-    margin-bottom:10px;
 }
 
 .subtitle{
+    font-size:22px;
     color:#555;
-    font-size:20px;
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
 button{
+
     width:100%;
+
     padding:18px;
+
     margin:15px 0;
+
     font-size:24px;
+
     border:none;
-    border-radius:18px;
-    background:#4CAF50;
+
+    border-radius:20px;
+
+    background:#43A047;
+
     color:white;
+
     cursor:pointer;
-    transition:.2s;
+
 }
 
 button:hover{
-    background:#388E3C;
-}
 
-button:active{
-    transform:scale(.98);
+    background:#2E7D32;
+
 }
