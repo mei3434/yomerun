@@ -11,6 +11,9 @@ let weakKanji = JSON.parse(
 const startBtn = document.getElementById("startBtn");
 const reviewBtn = document.getElementById("reviewBtn");
 const scoreBtn = document.getElementById("scoreBtn");
+const readingBtn = document.getElementById("readingBtn");
+
+readingBtn.onclick = startReadingQuiz;
 
 startBtn.onclick = startQuiz;
 reviewBtn.onclick = startWeakQuiz;
