@@ -1,8 +1,9 @@
 let questions = [];
 let currentQuestion = 0;
 let score = 0;
+let quizMode = "sentence";
 
-// 苦手な漢字を保存する
+// 苦手な漢字を保存
 let weakKanji = JSON.parse(
     localStorage.getItem("weakKanji") || "[]"
 );
@@ -12,10 +13,7 @@ const reviewBtn = document.getElementById("reviewBtn");
 const scoreBtn = document.getElementById("scoreBtn");
 
 startBtn.onclick = startQuiz;
-
-// 「にがてだけ」
 reviewBtn.onclick = startWeakQuiz;
-
 scoreBtn.onclick = showScore;
 
 
@@ -27,40 +25,39 @@ async function startQuiz() {
 
     try {
 
-        const response = await fetch("data/kanji5.json");
+        const response =
+            await fetch("data/kanji5.json");
 
         questions = await response.json();
 
-        if (questions.length === 0) {
-            alert("問題がありません。");
-            return;
-        }
-
         currentQuestion = 0;
         score = 0;
+        quizMode = "sentence";
 
         showQuestion();
 
     } catch (error) {
 
         alert("問題データを読み込めませんでした。");
-
         console.error(error);
+
     }
 }
 
 
 // ========================
-// 苦手漢字だけのクイズ
+// 苦手漢字だけ
 // ========================
 
 async function startWeakQuiz() {
 
     try {
 
-        const response = await fetch("data/kanji5.json");
+        const response =
+            await fetch("data/kanji5.json");
 
-        const allQuestions = await response.json();
+        const allQuestions =
+            await response.json();
 
         questions = allQuestions.filter(q =>
             weakKanji.includes(q.answer)
@@ -78,14 +75,15 @@ async function startWeakQuiz() {
 
         currentQuestion = 0;
         score = 0;
+        quizMode = "sentence";
 
         showQuestion();
 
     } catch (error) {
 
         alert("問題データを読み込めませんでした。");
-
         console.error(error);
+
     }
 }
 
@@ -98,7 +96,22 @@ function showQuestion() {
 
     const q = questions[currentQuestion];
 
+    if (quizMode === "reading") {
+        showReadingQuestion(q);
+    } else {
+        showSentenceQuestion(q);
+    }
+}
+
+
+// ========================
+// 文の中で読む問題
+// ========================
+
+function showSentenceQuestion(q) {
+
     document.body.innerHTML = `
+
         <div class="container quiz">
 
             <p class="question-number">
@@ -118,10 +131,79 @@ function showQuestion() {
         </div>
     `;
 
+    createChoices(q, q.choices);
+}
+
+
+// ========================
+// 漢字を見て読む問題
+// ========================
+
+function showReadingQuestion(q) {
+
+    const choices = makeReadingChoices(q);
+
+    document.body.innerHTML = `
+
+        <div class="container quiz">
+
+            <p class="question-number">
+                読み方クイズ
+            </p>
+
+            <div class="kanji-card">
+                <div class="big-kanji">
+                    ${q.kanji}
+                </div>
+            </div>
+
+            <p class="question-text">
+                なんて読む？
+            </p>
+
+            <div id="choices"></div>
+
+            <p id="result"></p>
+
+        </div>
+    `;
+
+    createChoices(q, choices);
+}
+
+
+// ========================
+// 読み方の選択肢を作る
+// ========================
+
+function makeReadingChoices(q) {
+
+    const correct = q.reading;
+
+    const wrong = q.choices.filter(
+        choice => choice !== correct
+    );
+
+    let choices = [correct];
+
+    for (let i = 0; i < wrong.length && choices.length < 4; i++) {
+        choices.push(wrong[i]);
+    }
+
+    return shuffle(choices);
+}
+
+
+// ========================
+// 選択肢を表示
+// ========================
+
+function createChoices(q, choices) {
+
     const choicesArea =
         document.getElementById("choices");
 
-    q.choices.forEach(choice => {
+    choices.forEach(choice => {
 
         const button =
             document.createElement("button");
@@ -129,7 +211,7 @@ function showQuestion() {
         button.textContent = choice;
 
         button.onclick = () =>
-            checkAnswer(choice);
+            checkAnswer(choice, q);
 
         choicesArea.appendChild(button);
     });
@@ -137,45 +219,54 @@ function showQuestion() {
 
 
 // ========================
-// 正解・不正解
+// 答え合わせ
 // ========================
 
-function checkAnswer(choice) {
-
-    const q = questions[currentQuestion];
+function checkAnswer(choice, q) {
 
     const result =
         document.getElementById("result");
 
-    if (choice === q.answer) {
+    let correctAnswer;
+
+    if (quizMode === "reading") {
+
+        correctAnswer = q.reading;
+
+    } else {
+
+        correctAnswer = q.answer;
+    }
+
+    if (choice === correctAnswer) {
 
         score++;
 
-        result.textContent = "🎉 せいかい！";
+        result.textContent =
+            "🎉 せいかい！";
 
-        // 正解したら苦手リストから外す
         weakKanji =
-            weakKanji.filter(k => k !== q.answer);
+            weakKanji.filter(
+                k => k !== q.answer
+            );
 
     } else {
 
         result.textContent =
-            `💡 正解は「${q.answer}」だよ。`;
+            `💡 正解は「${correctAnswer}」だよ。`;
 
-        // 間違えた漢字を苦手リストに追加
         if (!weakKanji.includes(q.answer)) {
 
             weakKanji.push(q.answer);
+
         }
     }
 
-    // 保存
     localStorage.setItem(
         "weakKanji",
         JSON.stringify(weakKanji)
     );
 
-    // もう一度答えられないようにする
     document
         .querySelectorAll("#choices button")
         .forEach(button => {
@@ -243,9 +334,7 @@ function showResult() {
             </p>
 
             <button onclick="location.reload()">
-
-                🌳 もう一度やる
-
+                🌳 ホームへ
             </button>
 
         </div>
@@ -280,11 +369,34 @@ function showScore() {
             }
 
             <button onclick="location.reload()">
-
                 🌳 ホームへ
-
             </button>
 
         </div>
     `;
+}
+
+
+// ========================
+// シャッフル
+// ========================
+
+function shuffle(array) {
+
+    const result = [...array];
+
+    for (
+        let i = result.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        const j =
+            Math.floor(Math.random() * (i + 1));
+
+        [result[i], result[j]] =
+            [result[j], result[i]];
+    }
+
+    return result;
 }
