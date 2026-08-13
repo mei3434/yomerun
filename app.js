@@ -253,25 +253,12 @@ function makeReadingChoices(q) {
     const correct =
         q.reading;
 
-    const wrong =
-        q.choices.filter(
-            choice => choice !== correct
-        );
+const choices = shuffle(
+    q.readingChoices
+);
 
-    let choices = [correct];
+return choices;
 
-    for (
-        let i = 0;
-        i < wrong.length &&
-        choices.length < 4;
-        i++
-    ) {
-
-        choices.push(wrong[i]);
-
-    }
-
-    return shuffle(choices);
 }
 
 
