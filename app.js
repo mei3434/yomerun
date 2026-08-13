@@ -250,14 +250,13 @@ function showReadingQuestion(q) {
 
 function makeReadingChoices(q) {
 
-    const correct =
-        q.reading;
+const correct = q.reading;
 
-const choices = shuffle(
-    q.readingChoices
+const choices = Array.from(
+    new Set([correct, ...q.readingChoices])
 );
 
-return choices;
+return shuffle(choices);
 
 }
 
