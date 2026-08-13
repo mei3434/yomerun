@@ -17,6 +17,11 @@ const startBtn = document.getElementById("startBtn");
 const readingBtn = document.getElementById("readingBtn");
 const reviewBtn = document.getElementById("reviewBtn");
 const scoreBtn = document.getElementById("scoreBtn");
+const compareBtn = document.getElementById("compareBtn");
+
+if (compareBtn) {
+    compareBtn.onclick = startCompareQuiz;
+}
 
 if (startBtn) {
     startBtn.onclick = startQuiz;
@@ -540,6 +545,8 @@ function shuffle(array) {
         ];
 
     }
+    // ========================
+// 見比べて読むク
 
     return result;
 }
