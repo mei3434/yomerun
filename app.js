@@ -550,3 +550,181 @@ function shuffle(array) {
 
     return result;
 }
+// ========================
+// 見比べて読むクイズ
+// ========================
+
+async function startCompareQuiz() {
+
+    try {
+
+        const response =
+            await fetch("data/kanji5.json");
+
+        const allQuestions =
+            await response.json();
+
+        questions = allQuestions;
+
+        currentQuestion = 0;
+        score = 0;
+        quizMode = "compare";
+
+        showCompareQuestion();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("問題データを読み込めませんでした。");
+
+    }
+}
+
+
+// ========================
+// 見比べ問題を表示
+// ========================
+
+function showCompareQuestion() {
+
+    const q = questions[currentQuestion];
+
+    // 正解を1つ選ぶ
+    const correct = q.kanji;
+
+    // 他の漢字を選ぶ
+    const others = questions
+        .filter(item => item.kanji !== correct)
+        .map(item => item.kanji);
+
+    // 4つにする
+    const choices = shuffle(
+        [correct, ...others]
+    ).slice(0, 4);
+
+    document.body.innerHTML = `
+
+        <div class="container quiz">
+
+            <p class="question-number">
+                👀 見比べて読む
+            </p>
+
+            <h2>
+                「${q.reading}」と読む漢字はどれ？
+            </h2>
+
+            <div id="choices"
+                 class="compare-choices">
+            </div>
+
+            <p id="result"></p>
+
+        </div>
+
+    `;
+
+    const choicesArea =
+        document.getElementById("choices");
+
+    choices.forEach(choice => {
+
+        const button =
+            document.createElement("button");
+
+        button.textContent = choice;
+
+        button.onclick = function () {
+
+            checkCompareAnswer(
+                choice,
+                q
+            );
+
+        };
+
+        choicesArea.appendChild(button);
+
+    });
+}
+
+
+// ========================
+// 見比べ問題の答え
+// ========================
+
+function checkCompareAnswer(choice, q) {
+
+    const result =
+        document.getElementById("result");
+
+    if (choice === q.kanji) {
+
+        score++;
+
+        result.textContent =
+            "🎉 せいかい！";
+
+        weakKanji =
+            weakKanji.filter(
+                kanji => kanji !== q.kanji
+            );
+
+    } else {
+
+        result.textContent =
+            `💡 正解は「${q.kanji}」だよ。`;
+
+        if (!weakKanji.includes(q.kanji)) {
+
+            weakKanji.push(q.kanji);
+
+        }
+
+    }
+
+    localStorage.setItem(
+        "weakKanji",
+        JSON.stringify(weakKanji)
+    );
+
+    document
+        .querySelectorAll("#choices button")
+        .forEach(button => {
+
+            button.disabled = true;
+
+        });
+
+    const nextButton =
+        document.createElement("button");
+
+    nextButton.textContent =
+        currentQuestion === questions.length - 1
+            ? "🏆 結果を見る"
+            : "➡️ 次へ";
+
+    nextButton.onclick = function () {
+
+        currentQuestion++;
+
+        if (
+            currentQuestion >=
+            questions.length
+        ) {
+
+            showResult();
+
+        } else {
+
+            showCompareQuestion();
+
+        }
+
+    };
+
+    document
+        .querySelector(".quiz")
+        .appendChild(nextButton);
+}
