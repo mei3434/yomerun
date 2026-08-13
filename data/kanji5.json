@@ -5,7 +5,8 @@
     "sentence": "自然を大切にする。",
     "question": "しぜん",
     "choices": ["しぜん", "じぜん", "しねん", "しせん"],
-    "answer": "自然"
+    "answer": "自然",
+    "compareChoices": ["自然", "自信", "自由", "自転"]
   },
   {
     "kanji": "映画",
@@ -13,7 +14,8 @@
     "sentence": "映画を見る。",
     "question": "えいが",
     "choices": ["えいご", "えいが", "えいか", "えんが"],
-    "answer": "映画"
+    "answer": "映画",
+    "compareChoices": ["映画", "英語", "栄養", "永遠"]
   },
   {
     "kanji": "枝",
@@ -21,7 +23,8 @@
     "sentence": "さくらの枝がのびる。",
     "question": "えだ",
     "choices": ["えた", "えだ", "えん", "えき"],
-    "answer": "枝"
+    "answer": "枝",
+    "compareChoices": ["枝", "技", "板", "校"]
   },
   {
     "kanji": "教室",
@@ -29,7 +32,8 @@
     "sentence": "教室で勉強する。",
     "question": "きょうしつ",
     "choices": ["きょうしつ", "きょうじつ", "きょうせつ", "きょうしき"],
-    "answer": "教室"
+    "answer": "教室",
+    "compareChoices": ["教室", "教科", "教員", "教会"]
   },
   {
     "kanji": "生活",
@@ -37,6 +41,7 @@
     "sentence": "新しい生活が始まる。",
     "question": "せいかつ",
     "choices": ["せいかつ", "せいがつ", "しょうかつ", "せいけつ"],
-    "answer": "生活"
+    "answer": "生活",
+    "compareChoices": ["生活", "生物", "生徒", "生命"]
   }
 ]
