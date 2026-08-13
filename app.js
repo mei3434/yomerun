@@ -591,17 +591,12 @@ function showCompareQuestion() {
     const q = questions[currentQuestion];
 
     // 正解を1つ選ぶ
-    const correct = q.kanji;
+const choices = shuffle(
+    q.compareChoices
+);
 
-    // 他の漢字を選ぶ
-    const others = questions
-        .filter(item => item.kanji !== correct)
-        .map(item => item.kanji);
 
-    // 4つにする
-    const choices = shuffle(
-        [correct, ...others]
-    ).slice(0, 4);
+    
 
     document.body.innerHTML = `
 
