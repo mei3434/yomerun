@@ -5,6 +5,7 @@
     "sentence": "自然を大切にする。",
     "question": "しぜん",
     "choices": ["しぜん", "じぜん", "しねん", "しせん"],
+    "readingChoices": ["しぜん", "じぜん", "しねん", "しせん"],
     "answer": "自然",
     "compareChoices": ["自然", "自信", "自由", "自転"]
   },
@@ -14,6 +15,7 @@
     "sentence": "映画を見る。",
     "question": "えいが",
     "choices": ["えいご", "えいが", "えいか", "えんが"],
+    "readingChoices": ["えいが", "えいご", "えいよう", "えいえん"],
     "answer": "映画",
     "compareChoices": ["映画", "英語", "栄養", "永遠"]
   },
@@ -23,6 +25,7 @@
     "sentence": "さくらの枝がのびる。",
     "question": "えだ",
     "choices": ["えた", "えだ", "えん", "えき"],
+    "readingChoices": ["えだ", "えた", "えで", "えき"],
     "answer": "枝",
     "compareChoices": ["枝", "技", "板", "校"]
   },
@@ -32,6 +35,7 @@
     "sentence": "教室で勉強する。",
     "question": "きょうしつ",
     "choices": ["きょうしつ", "きょうじつ", "きょうせつ", "きょうしき"],
+    "readingChoices": ["きょうしつ", "きょうか", "きょういん", "きょうかい"],
     "answer": "教室",
     "compareChoices": ["教室", "教科", "教員", "教会"]
   },
@@ -41,7 +45,58 @@
     "sentence": "新しい生活が始まる。",
     "question": "せいかつ",
     "choices": ["せいかつ", "せいがつ", "しょうかつ", "せいけつ"],
+    "readingChoices": ["せいかつ", "せいぶつ", "せいと", "せいめい"],
     "answer": "生活",
     "compareChoices": ["生活", "生物", "生徒", "生命"]
+  },
+  {
+    "kanji": "移動",
+    "reading": "いどう",
+    "sentence": "教室から体育館へ移動する。",
+    "question": "いどう",
+    "choices": ["いどう", "いじょう", "いどうう", "いとう"],
+    "readingChoices": ["いどう", "いじょう", "いとう", "いどうう"],
+    "answer": "移動",
+    "compareChoices": ["移動", "異動", "移住", "移植"]
+  },
+  {
+    "kanji": "永遠",
+    "reading": "えいえん",
+    "sentence": "思い出は永遠に残る。",
+    "question": "えいえん",
+    "choices": ["えいえん", "えいが", "えいご", "えいよう"],
+    "readingChoices": ["えいえん", "えいが", "えいご", "えいよう"],
+    "answer": "永遠",
+    "compareChoices": ["永遠", "映画", "英語", "栄養"]
+  },
+  {
+    "kanji": "応援",
+    "reading": "おうえん",
+    "sentence": "みんなで選手を応援する。",
+    "question": "おうえん",
+    "choices": ["おうえん", "おうよう", "おうとう", "はんのう"],
+    "readingChoices": ["おうえん", "おうよう", "おうとう", "はんのう"],
+    "answer": "応援",
+    "compareChoices": ["応援", "応用", "応答", "反応"]
+  },
+  {
+    "kanji": "演奏",
+    "reading": "えんそう",
+    "sentence": "音楽室で演奏する。",
+    "question": "えんそう",
+    "choices": ["えんそう", "えんぎ", "えんぜつ", "こうえん"],
+    "readingChoices": ["えんそう", "えんぎ", "えんぜつ", "こうえん"],
+    "answer": "演奏",
+    "compareChoices": ["演奏", "演技", "演説", "公演"]
+  },
+  {
+    "kanji": "衛星",
+    "reading": "えいせい",
+    "sentence": "月は地球の衛星です。",
+    "question": "えいせい",
+    "choices": ["えいせい", "えいが", "えいご", "しゅえい"],
+    "readingChoices": ["えいせい", "えいが", "えいご", "しゅえい"],
+    "answer": "衛星",
+    "compareChoices": ["衛星", "衛生", "衛兵", "守衛"]
   }
 ]
