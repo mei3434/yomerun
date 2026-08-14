@@ -643,19 +643,23 @@ function checkCompareAnswer(choice, q) {
     if (choice === q.kanji) {
 
         score++;
-
-        result.textContent =
-            "🎉 せいかい！";
+result.innerHTML =
+    `🎉 せいかい！<br>
+     <strong>${q.kanji}</strong><br>
+     <span>${q.reading}</span>`;
 
         weakKanji =
             weakKanji.filter(
                 kanji => kanji !== q.kanji
             );
 
-    } else {
+} else {
 
-        result.textContent =
-            `💡 正解は「${q.kanji}」だよ。`;
+    result.innerHTML =
+        `💡 おしい！<br>
+         正解は<br>
+         <strong>${q.kanji}</strong><br>
+         <span>${q.reading}</span>`;
 
         if (!weakKanji.includes(q.kanji)) {
 
