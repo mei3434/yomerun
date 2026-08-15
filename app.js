@@ -1,6 +1,7 @@
 let questions = [];
 let currentQuestion = 0;
 let score = 0;
+let correctKanji = [];
 let quizMode = "sentence";
 
 // 苦手な漢字を保存
@@ -318,6 +319,8 @@ function checkAnswer(choice, q) {
 
         score++;
 
+        correctKanji.push(q.answer);
+
         result.textContent =
             "🎉 せいかい！";
 
@@ -418,29 +421,48 @@ function nextQuestion() {
 
 function showResult() {
 
+    const correctCount = score;
+
+    const wrongCount =
+        questions.length - score;
+
     document.body.innerHTML = `
 
         <div class="container">
 
-            <h1>🏆 結果</h1>
+            <h1>🏆 今日の結果</h1>
 
             <p class="result-score">
 
                 ${questions.length}問中
 
                 <strong>
-                    ${score}問
+                    ${correctCount}問
                 </strong>
 
                 正解！
 
             </p>
 
-            <button
-                onclick="location.reload()"
-            >
-                🌳 ホームへ
-            </button>
+            <div class="result-message">
+
+                ${
+                    wrongCount === 0
+                    ? "🎉 ぜんぶできた！すごい！"
+                    : `💪 あと${wrongCount}問、もう一回やってみよう！`
+                }
+
+            </div>
+
+            <div class="result-buttons">
+
+                <button
+                    onclick="location.reload()"
+                >
+                    🌳 ホームへ
+                </button>
+
+            </div>
 
         </div>
 
@@ -643,6 +665,9 @@ function checkCompareAnswer(choice, q) {
     if (choice === q.kanji) {
 
         score++;
+        
+        correctKanji.push(q.kanji);
+        
 result.innerHTML =
     `🎉 せいかい！<br>
      <strong>${q.kanji}</strong><br>
