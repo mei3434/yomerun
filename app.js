@@ -421,6 +421,9 @@ function nextQuestion() {
 
 function showResult() {
 
+    const savedCorrectKanji = JSON.parse(
+    localStorage.getItem("correctKanji") || "[]"
+);
     const correctCount = score;
 
     const wrongCount =
@@ -433,6 +436,20 @@ function showResult() {
             <h1>🏆 今日の結果</h1>
 
             <p class="result-score">
+            <div class="correct-kanji">
+
+    <h2>🌟 できた漢字</h2>
+
+    <p>
+        ${
+            savedCorrectKanji.length > 0
+            ? savedCorrectKanji.join("　")
+            : "まだありません"
+        }
+    </p>
+
+</div>
+            
 
                 ${questions.length}問中
 
