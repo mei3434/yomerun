@@ -424,6 +424,18 @@ function showResult() {
     const savedCorrectKanji = JSON.parse(
     localStorage.getItem("correctKanji") || "[]"
 );
+const correctKanjiWithReading =
+    savedCorrectKanji.map(kanji => {
+
+        const question =
+            questions.find(q => q.kanji === kanji);
+
+        return question
+            ? `${kanji}（${question.reading}）`
+            : kanji;
+
+    });
+    
     const correctCount = score;
 
     const wrongCount =
@@ -437,8 +449,7 @@ function showResult() {
 
             <p class="result-score">
             <div class="correct-kanji">
-
-    <h2>🌟 できた漢字</h2>
+<h2>🌟 できた漢字</h2>
 
     <p>
         ${
@@ -447,6 +458,7 @@ function showResult() {
             : "まだありません"
         }
     </p>
+    
 
 </div>
             
