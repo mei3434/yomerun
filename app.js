@@ -270,8 +270,10 @@ function createChoices(q, choices) {
 
     const choicesArea =
         document.getElementById("choices");
+　　 const shuffledChoices =
+        shuffle([...choices]);
 
-    choices.forEach(choice => {
+    shuffledChoices.forEach(choice => {
 
         const button =
             document.createElement("button");
