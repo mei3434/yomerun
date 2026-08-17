@@ -200,7 +200,7 @@ function showSentenceQuestion(q) {
 
     `;
 
-    createChoices(q, q.choices);
+    createChoices(q, q.compareChoices);
 }
 
 
