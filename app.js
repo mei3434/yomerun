@@ -683,6 +683,33 @@ const choices = shuffle(
     });
 }
 
+function showCompareResult() {
+
+    document.body.innerHTML = `
+
+        <div class="container">
+
+            <h1>🎉 よく見比べたね！</h1>
+
+            <p>
+                漢字と読み方をしっかり確認できました。
+            </p>
+
+            <div class="result-buttons">
+
+                <button
+                    onclick="location.reload()"
+                >
+                    🌳 ホームへ
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
 
 // ========================
 // 見比べ問題の答え
