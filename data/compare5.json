@@ -1,0 +1,29 @@
+[
+  {
+    "group": "自然",
+    "items": [
+      { "kanji": "自然", "reading": "しぜん" },
+      { "kanji": "自信", "reading": "じしん" },
+      { "kanji": "自由", "reading": "じゆう" },
+      { "kanji": "自転", "reading": "じてん" }
+    ]
+  },
+  {
+    "group": "映画",
+    "items": [
+      { "kanji": "映画", "reading": "えいが" },
+      { "kanji": "英語", "reading": "えいご" },
+      { "kanji": "栄養", "reading": "えいよう" },
+      { "kanji": "永遠", "reading": "えいえん" }
+    ]
+  },
+  {
+    "group": "枝",
+    "items": [
+      { "kanji": "枝", "reading": "えだ" },
+      { "kanji": "技", "reading": "わざ" },
+      { "kanji": "板", "reading": "いた" },
+      { "kanji": "校", "reading": "こう" }
+    ]
+  }
+]
