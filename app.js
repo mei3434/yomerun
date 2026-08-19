@@ -251,13 +251,29 @@ function showReadingQuestion(q) {
 
 function makeReadingChoices(q) {
 
-const correct = q.reading;
+    const correct = q.reading;
 
-const choices = Array.from(
-    new Set([correct, ...q.readingChoices])
-);
+    // 同じ読みを持つ漢字の読みを調べる
+    const sameReadingKanji =
+        questions
+            .filter(item =>
+                item.reading === correct &&
+                item.kanji !== q.kanji
+            )
+            .map(item => item.reading);
 
-return shuffle(choices);
+    // 同じ読みは選択肢から除外
+    const choices = Array.from(
+        new Set([
+            correct,
+            ...q.readingChoices.filter(
+                reading =>
+                    !sameReadingKanji.includes(reading)
+            )
+        ])
+    );
+
+    return shuffle(choices);
 
 }
 
