@@ -614,7 +614,7 @@ async function startCompareQuiz() {
     try {
 
         const response =
-            await fetch("data/kanji5.json");
+            await fetch("data/compare5.json");
 
         const allQuestions =
             await response.json();
