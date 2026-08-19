@@ -645,13 +645,18 @@ function showCompareQuestion() {
 
     const q = questions[currentQuestion];
 
-    // 正解を1つ選ぶ
-const choices = shuffle(
-    q.compareChoices
-);
+    // 漢字を選択肢にする
+    const choices = shuffle(
+        q.items.map(item => item.kanji)
+    );
 
-
-    
+    // 文をランダムに1つ選ぶ
+    const correctItem =
+        q.items[
+            Math.floor(
+                Math.random() * q.items.length
+            )
+        ];
 
     document.body.innerHTML = `
 
@@ -662,8 +667,12 @@ const choices = shuffle(
             </p>
 
             <h2>
-                「${q.reading}」と読む漢字はどれ？
+                ${correctItem.sentence}
             </h2>
+
+            <p class="question-text">
+                「${correctItem.reading}」に合う漢字はどれ？
+            </p>
 
             <div id="choices"
                  class="compare-choices">
@@ -689,7 +698,7 @@ const choices = shuffle(
 
             checkCompareAnswer(
                 choice,
-                q
+                correctItem.kanji
             );
 
         };
@@ -698,7 +707,6 @@ const choices = shuffle(
 
     });
 }
-
 function showCompareResult() {
 
     document.body.innerHTML = `
