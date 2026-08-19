@@ -1,29 +1,32 @@
 [
   {
-    "group": "自然",
+    "group": "いどう",
     "items": [
-      { "kanji": "自然", "reading": "しぜん" },
-      { "kanji": "自信", "reading": "じしん" },
-      { "kanji": "自由", "reading": "じゆう" },
-      { "kanji": "自転", "reading": "じてん" }
+      {
+        "kanji": "移動",
+        "reading": "いどう",
+        "sentence": "教室から体育館へ「いどう」する。"
+      },
+      {
+        "kanji": "異動",
+        "reading": "いどう",
+        "sentence": "先生の人事「いどう」が発表された。"
+      }
     ]
   },
   {
-    "group": "映画",
+    "group": "えいせい",
     "items": [
-      { "kanji": "映画", "reading": "えいが" },
-      { "kanji": "英語", "reading": "えいご" },
-      { "kanji": "栄養", "reading": "えいよう" },
-      { "kanji": "永遠", "reading": "えいえん" }
-    ]
-  },
-  {
-    "group": "枝",
-    "items": [
-      { "kanji": "枝", "reading": "えだ" },
-      { "kanji": "技", "reading": "わざ" },
-      { "kanji": "板", "reading": "いた" },
-      { "kanji": "校", "reading": "こう" }
+      {
+        "kanji": "衛星",
+        "reading": "えいせい",
+        "sentence": "月は地球の「えいせい」です。"
+      },
+      {
+        "kanji": "衛生",
+        "reading": "えいせい",
+        "sentence": "食べ物の「えいせい」に気をつける。"
+      }
     ]
   }
 ]
