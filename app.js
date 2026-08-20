@@ -739,47 +739,27 @@ function showCompareResult() {
 // 見比べ問題の答え
 // ========================
 
-function checkCompareAnswer(choice, q) {
+function checkCompareAnswer(choice, correctKanji) {
 
     const result =
         document.getElementById("result");
 
-    if (choice === q.kanji) {
+    if (choice === correctKanji) {
 
         score++;
-        
-        correctKanji.push(q.kanji);
-        
-result.innerHTML =
-    `🎉 せいかい！<br>
-     <strong>${q.kanji}</strong><br>
-     <span>${q.reading}</span>`;
 
-        weakKanji =
-            weakKanji.filter(
-                kanji => kanji !== q.kanji
-            );
+        result.innerHTML =
+            `🎉 せいかい！<br>
+             <strong>${correctKanji}</strong>`;
 
-} else {
+    } else {
 
-    result.innerHTML =
-        `💡 おしい！<br>
-         正解は<br>
-         <strong>${q.kanji}</strong><br>
-         <span>${q.reading}</span>`;
-
-        if (!weakKanji.includes(q.kanji)) {
-
-            weakKanji.push(q.kanji);
-
-        }
+        result.innerHTML =
+            `💡 おしい！<br>
+             正解は<br>
+             <strong>${correctKanji}</strong>`;
 
     }
-
-    localStorage.setItem(
-        "weakKanji",
-        JSON.stringify(weakKanji)
-    );
 
     document
         .querySelectorAll("#choices button")
@@ -794,7 +774,7 @@ result.innerHTML =
 
     nextButton.textContent =
         currentQuestion === questions.length - 1
-            ? "🏆 結果を見る"
+            ? "🏆 終わり"
             : "➡️ 次へ";
 
     nextButton.onclick = function () {
@@ -806,7 +786,7 @@ result.innerHTML =
             questions.length
         ) {
 
-            showResult();
+            showCompareResult();
 
         } else {
 
@@ -819,4 +799,5 @@ result.innerHTML =
     document
         .querySelector(".quiz")
         .appendChild(nextButton);
+
 }
