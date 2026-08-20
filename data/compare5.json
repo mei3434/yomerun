@@ -28,5 +28,150 @@
         "sentence": "食べ物の「えいせい」に気をつける。"
       }
     ]
+  },
+  {
+    "group": "かえる",
+    "items": [
+      {
+        "kanji": "帰る",
+        "reading": "かえる",
+        "sentence": "学校が終わったら家に「かえる」。"
+      },
+      {
+        "kanji": "返る",
+        "reading": "かえる",
+        "sentence": "貸した本が手元に「かえる」。"
+      },
+      {
+        "kanji": "変える",
+        "reading": "かえる",
+        "sentence": "計画を「かえる」。"
+      },
+      {
+        "kanji": "替える",
+        "reading": "かえる",
+        "sentence": "古い電池を新しいものに「かえる」。"
+      },
+      {
+        "kanji": "換える",
+        "reading": "かえる",
+        "sentence": "日本のお金を外国のお金に「かえる」。"
+      }
+    ]
+  },
+  {
+    "group": "きく",
+    "items": [
+      {
+        "kanji": "聞く",
+        "reading": "きく",
+        "sentence": "先生の話をよく「きく」。"
+      },
+      {
+        "kanji": "聴く",
+        "reading": "きく",
+        "sentence": "音楽を静かに「きく」。"
+      },
+      {
+        "kanji": "効く",
+        "reading": "きく",
+        "sentence": "この薬はよく「きく」。"
+      },
+      {
+        "kanji": "利く",
+        "reading": "きく",
+        "sentence": "この道は近道が「きく」。"
+      }
+    ]
+  },
+  {
+    "group": "はかる",
+    "items": [
+      {
+        "kanji": "測る",
+        "reading": "はかる",
+        "sentence": "定規で長さを「はかる」。"
+      },
+      {
+        "kanji": "計る",
+        "reading": "はかる",
+        "sentence": "ストップウォッチで時間を「はかる」。"
+      },
+      {
+        "kanji": "量る",
+        "reading": "はかる",
+        "sentence": "はかりで米の重さを「はかる」。"
+      },
+      {
+        "kanji": "図る",
+        "reading": "はかる",
+        "sentence": "みんなで問題の解決を「はかる」。"
+      }
+    ]
+  },
+  {
+    "group": "とる",
+    "items": [
+      {
+        "kanji": "取る",
+        "reading": "とる",
+        "sentence": "机の上の本を「とる」。"
+      },
+      {
+        "kanji": "撮る",
+        "reading": "とる",
+        "sentence": "旅行の写真を「とる」。"
+      },
+      {
+        "kanji": "採る",
+        "reading": "とる",
+        "sentence": "山で山菜を「とる」。"
+      },
+      {
+        "kanji": "捕る",
+        "reading": "とる",
+        "sentence": "川で魚を「とる」。"
+      }
+    ]
+  },
+  {
+    "group": "あける",
+    "items": [
+      {
+        "kanji": "開ける",
+        "reading": "あける",
+        "sentence": "窓を「開ける」。"
+      },
+      {
+        "kanji": "空ける",
+        "reading": "あける",
+        "sentence": "席を「空ける」。"
+      },
+      {
+        "kanji": "明ける",
+        "reading": "あける",
+        "sentence": "長い夜が「明ける」。"
+      }
+    ]
+  },
+  {
+    "group": "つとめる",
+    "items": [
+      {
+        "kanji": "努める",
+        "reading": "つとめる",
+        "sentence": "毎日、漢字の練習に「つとめる」。"
+      },
+      {
+        "kanji": "勤める",
+        "reading": "つとめる",
+        "sentence": "父は会社に「つとめる」。"
+      },
+      {
+        "kanji": "務める",
+        "reading": "つとめる",
+        "sentence": "学級委員を「つとめる」。"
+      }
+    ]
   }
 ]
