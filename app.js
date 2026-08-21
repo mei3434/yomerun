@@ -19,6 +19,7 @@ const readingBtn = document.getElementById("readingBtn");
 const reviewBtn = document.getElementById("reviewBtn");
 const scoreBtn = document.getElementById("scoreBtn");
 const compareBtn = document.getElementById("compareBtn");
+const compareListBtn = document.getElementById("compareListBtn");
 
 if (compareBtn) {
     compareBtn.onclick = startCompareQuiz;
