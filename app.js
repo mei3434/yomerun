@@ -636,6 +636,81 @@ async function startCompareQuiz() {
 
     }
 }
+async function showCompareList() {
+
+    try {
+
+        const response =
+            await fetch("data/compare5.json");
+
+        if (!response.ok) {
+            throw new Error("読み込み失敗");
+        }
+
+        const data =
+            await response.json();
+
+        document.body.innerHTML = `
+
+            <div class="container">
+
+                <h1>📖 同じ読みの漢字</h1>
+
+                <p>
+                    同じ読みでも、意味や使い方がちがう漢字があります。
+                </p>
+
+                <div id="compareList"></div>
+
+                <button onclick="location.reload()">
+                    🌳 ホームへ
+                </button>
+
+            </div>
+
+        `;
+
+        const list =
+            document.getElementById("compareList");
+
+        data.forEach(group => {
+
+            const section =
+                document.createElement("div");
+
+            section.innerHTML = `
+                <h2>「${group.group}」</h2>
+            `;
+
+            group.items.forEach(item => {
+
+                const card =
+                    document.createElement("div");
+
+                card.innerHTML = `
+                    <h3>${item.kanji}</h3>
+                    <p>${item.sentence}</p>
+                `;
+
+                section.appendChild(card);
+
+            });
+
+            list.appendChild(section);
+
+        });
+
+    } catch (error) {
+
+        document.body.innerHTML = `
+            <div class="container">
+                <p>問題データを読み込めませんでした。</p>
+            </div>
+        `;
+
+        console.error(error);
+    }
+}
 
 
 // ========================
