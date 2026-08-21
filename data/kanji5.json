@@ -100,3 +100,215 @@
     "compareChoices": ["衛星", "衛生", "衛兵", "守衛"]
   }
 ]
+[
+  {
+    "kanji": "説明",
+    "reading": "せつめい",
+    "sentence": "先生が問題の解き方を説明する。",
+    "question": "せつめい",
+    "choices": ["せつめい", "せつめ", "せちめい", "せつめん"],
+    "readingChoices": ["せつめい", "せつめ", "せちめい", "せつめん"],
+    "answer": "説明",
+    "compareChoices": ["説明", "設明", "説名", "節明"]
+  },
+  {
+    "kanji": "宿題",
+    "reading": "しゅくだい",
+    "sentence": "家に帰ってから宿題をする。",
+    "question": "しゅくだい",
+    "choices": ["しゅくだい", "しゅくだ", "しゅくたい", "じゅくだい"],
+    "readingChoices": ["しゅくだい", "しゅくだ", "しゅくたい", "じゅくだい"],
+    "answer": "宿題",
+    "compareChoices": ["宿題", "宿代", "祝題", "宿体"]
+  },
+  {
+    "kanji": "研究",
+    "reading": "けんきゅう",
+    "sentence": "理科の授業で植物について研究する。",
+    "question": "けんきゅう",
+    "choices": ["けんきゅう", "けんきょ", "げんきゅう", "けんきゅ"],
+    "readingChoices": ["けんきゅう", "けんきょ", "げんきゅう", "けんきゅ"],
+    "answer": "研究",
+    "compareChoices": ["研究", "建級", "健急", "検休"]
+  },
+  {
+    "kanji": "資料",
+    "reading": "しりょう",
+    "sentence": "図書館で調べ学習の資料を集める。",
+    "question": "しりょう",
+    "choices": ["しりょう", "しりょ", "じりょう", "しりゅう"],
+    "readingChoices": ["しりょう", "しりょ", "じりょう", "しりゅう"],
+    "answer": "資料",
+    "compareChoices": ["資料", "試料", "思料", "史料"]
+  },
+  {
+    "kanji": "実験",
+    "reading": "じっけん",
+    "sentence": "理科の時間に実験をする。",
+    "question": "じっけん",
+    "choices": ["じっけん", "じけん", "しっけん", "じっこん"],
+    "readingChoices": ["じっけん", "じけん", "しっけん", "じっこん"],
+    "answer": "実験",
+    "compareChoices": ["実験", "実見", "実研", "実健"]
+  },
+  {
+    "kanji": "約束",
+    "reading": "やくそく",
+    "sentence": "友達と遊ぶ約束をする。",
+    "question": "やくそく",
+    "choices": ["やくそく", "やくぞく", "やくそ", "やっそく"],
+    "readingChoices": ["やくそく", "やくぞく", "やくそ", "やっそく"],
+    "answer": "約束",
+    "compareChoices": ["約束", "役束", "約速", "薬束"]
+  },
+  {
+    "kanji": "必要",
+    "reading": "ひつよう",
+    "sentence": "必要なものを前の日に準備する。",
+    "question": "ひつよう",
+    "choices": ["ひつよう", "ひつよ", "ひっよう", "ひちよう"],
+    "readingChoices": ["ひつよう", "ひつよ", "ひっよう", "ひちよう"],
+    "answer": "必要",
+    "compareChoices": ["必要", "必用", "筆要", "必陽"]
+  },
+  {
+    "kanji": "安全",
+    "reading": "あんぜん",
+    "sentence": "交通ルールを守って安全に歩く。",
+    "question": "あんぜん",
+    "choices": ["あんぜん", "あんせん", "あぜん", "あんぜ"],
+    "readingChoices": ["あんぜん", "あんせん", "あぜん", "あんぜ"],
+    "answer": "安全",
+    "compareChoices": ["安全", "安然", "案全", "安前"]
+  },
+  {
+    "kanji": "健康",
+    "reading": "けんこう",
+    "sentence": "健康のために毎日運動する。",
+    "question": "けんこう",
+    "choices": ["けんこう", "けんこ", "げんこう", "けんごう"],
+    "readingChoices": ["けんこう", "けんこ", "げんこう", "けんごう"],
+    "answer": "健康",
+    "compareChoices": ["健康", "健校", "検行", "建工"]
+  },
+  {
+    "kanji": "環境",
+    "reading": "かんきょう",
+    "sentence": "地球の環境を大切にする。",
+    "question": "かんきょう",
+    "choices": ["かんきょう", "かんきょ", "かんきゅう", "がんきょう"],
+    "readingChoices": ["かんきょう", "かんきょ", "かんきゅう", "がんきょう"],
+    "answer": "環境",
+    "compareChoices": ["環境", "環鏡", "観境", "関境"]
+  },
+  {
+    "kanji": "地域",
+    "reading": "ちいき",
+    "sentence": "地域のみんなで町をきれいにする。",
+    "question": "ちいき",
+    "choices": ["ちいき", "ちいぎ", "ちき", "ちいけ"],
+    "readingChoices": ["ちいき", "ちいぎ", "ちき", "ちいけ"],
+    "answer": "地域",
+    "compareChoices": ["地域", "地城", "地位", "知域"]
+  },
+  {
+    "kanji": "季節",
+    "reading": "きせつ",
+    "sentence": "日本には四つの季節がある。",
+    "question": "きせつ",
+    "choices": ["きせつ", "きぜつ", "きせち", "きせい"],
+    "readingChoices": ["きせつ", "きぜつ", "きせち", "きせい"],
+    "answer": "季節",
+    "compareChoices": ["季節", "季切", "気節", "期節"]
+  },
+  {
+    "kanji": "意見",
+    "reading": "いけん",
+    "sentence": "みんなで自分の意見を発表する。",
+    "question": "いけん",
+    "choices": ["いけん", "いげん", "いけ", "いこん"],
+    "readingChoices": ["いけん", "いげん", "いけ", "いこん"],
+    "answer": "意見",
+    "compareChoices": ["意見", "意研", "異見", "医見"]
+  },
+  {
+    "kanji": "理由",
+    "reading": "りゆう",
+    "sentence": "その理由をくわしく説明する。",
+    "question": "りゆう",
+    "choices": ["りゆう", "りゅう", "りよう", "りゆ"],
+    "readingChoices": ["りゆう", "りゅう", "りよう", "りゆ"],
+    "answer": "理由",
+    "compareChoices": ["理由", "理油", "利由", "理有"]
+  },
+  {
+    "kanji": "解決",
+    "reading": "かいけつ",
+    "sentence": "みんなで話し合って問題を解決する。",
+    "question": "かいけつ",
+    "choices": ["かいけつ", "かいけち", "がいけつ", "かいげつ"],
+    "readingChoices": ["かいけつ", "かいけち", "がいけつ", "かいげつ"],
+    "answer": "解決",
+    "compareChoices": ["解決", "解結", "開決", "解月"]
+  },
+  {
+    "kanji": "努力",
+    "reading": "どりょく",
+    "sentence": "目標に向かって努力する。",
+    "question": "どりょく",
+    "choices": ["どりょく", "どりょう", "とりょく", "どりょ"],
+    "readingChoices": ["どりょく", "どりょう", "とりょく", "どりょ"],
+    "answer": "努力",
+    "compareChoices": ["努力", "土力", "度力", "努緑"]
+  },
+  {
+    "kanji": "協力",
+    "reading": "きょうりょく",
+    "sentence": "友達と協力して準備をする。",
+    "question": "きょうりょく",
+    "choices": ["きょうりょく", "きょうりょう", "きょりょく", "きょうろく"],
+    "readingChoices": ["きょうりょく", "きょうりょう", "きょりょく", "きょうろく"],
+    "answer": "協力",
+    "compareChoices": ["協力", "強力", "協緑", "教力"]
+  },
+  {
+    "kanji": "説明",
+    "reading": "せつめい",
+    "sentence": "友達にゲームのルールを説明する。",
+    "question": "せつめい",
+    "choices": ["せつめい", "せつめ", "せちめい", "せつない"],
+    "readingChoices": ["せつめい", "せつめ", "せちめい", "せつない"],
+    "answer": "説明",
+    "compareChoices": ["説明", "説名", "節明", "設明"]
+  },
+  {
+    "kanji": "準備",
+    "reading": "じゅんび",
+    "sentence": "遠足の準備を前の日にする。",
+    "question": "じゅんび",
+    "choices": ["じゅんび", "じゅんぴ", "じゅび", "じんび"],
+    "readingChoices": ["じゅんび", "じゅんぴ", "じゅび", "じんび"],
+    "answer": "準備",
+    "compareChoices": ["準備", "準美", "順備", "準尾"]
+  },
+  {
+    "kanji": "参加",
+    "reading": "さんか",
+    "sentence": "クラスのみんなで大会に参加する。",
+    "question": "さんか",
+    "choices": ["さんか", "さんが", "ざんか", "さんけ"],
+    "readingChoices": ["さんか", "さんが", "ざんか", "さんけ"],
+    "answer": "参加",
+    "compareChoices": ["参加", "三化", "産加", "参科"]
+  },
+  {
+    "kanji": "観察",
+    "reading": "かんさつ",
+    "sentence": "虫の動きをよく観察する。",
+    "question": "かんさつ",
+    "choices": ["かんさつ", "かんざつ", "かんさち", "がんさつ"],
+    "readingChoices": ["かんさつ", "かんざつ", "かんさち", "がんさつ"],
+    "answer": "観察",
+    "compareChoices": ["観察", "観札", "感察", "館察"]
+  }
+]
