@@ -98,9 +98,7 @@
     "readingChoices": ["えいせい", "えいが", "えいご", "しゅえい"],
     "answer": "衛星",
     "compareChoices": ["衛星", "衛生", "衛兵", "守衛"]
-  }
-]
-[
+  },
   {
     "kanji": "説明",
     "reading": "せつめい",
