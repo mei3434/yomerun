@@ -691,9 +691,10 @@ async function showCompareList() {
                     document.createElement("div");
 
                 card.innerHTML = `
+    card.innerHTML = `
     <div class="compare-card">
-        <h3>🟦 ${item.kanji}</h3>
-        <p>${item.sentence}</p>
+        <strong>${item.kanji}</strong>
+        <span>${item.sentence}</span>
     </div>
 `;
 
