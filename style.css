@@ -161,6 +161,22 @@ button:active {
     background: #fff;
     border: 2px solid #ddd;
 }
+    .compare-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 12px 0;
+    padding: 12px;
+}
+
+.compare-card strong {
+    min-width: 70px;
+    font-size: 1.3em;
+}
+
+.compare-card span {
+    flex: 1;
+}
 
 .correct-kanji h2 {
     margin-top: 0;
