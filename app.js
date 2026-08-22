@@ -24,6 +24,9 @@ const compareListBtn = document.getElementById("compareListBtn");
 if (compareBtn) {
     compareBtn.onclick = startCompareQuiz;
 }
+if (compareListBtn) {
+    compareListBtn.onclick = showCompareList;
+}
 
 if (startBtn) {
     startBtn.onclick = startQuiz;
