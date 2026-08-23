@@ -290,7 +290,8 @@ function createChoices(q, choices) {
 
     const choicesArea =
         document.getElementById("choices");
-　　 const shuffledChoices =
+
+const shuffledChoices =
         shuffle([...choices]);
 
     shuffledChoices.forEach(choice => {
