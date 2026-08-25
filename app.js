@@ -199,6 +199,9 @@ function showSentenceQuestion(q) {
             <div id="choices"></div>
 
             <p id="result"></p>
+            <button onclick="location.reload()">
+    🌳 ホームへ
+</button>
 
         </div>
 
@@ -240,6 +243,9 @@ function showReadingQuestion(q) {
             <div id="choices"></div>
 
             <p id="result"></p>
+            <button onclick="location.reload()">
+    🌳 ホームへ
+</button>
 
         </div>
 
@@ -761,6 +767,9 @@ function showCompareQuestion() {
             </div>
 
             <p id="result"></p>
+           <button onclick="location.reload()">
+    🌳 ホームへ
+</button>
 
         </div>
 
