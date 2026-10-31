@@ -199,7 +199,7 @@ function showSentenceQuestion(q) {
             <div id="choices"></div>
 
             <p id="result"></p>
-            <button onclick="location.reload()">
+            <button onclick="showHome()">
     🌳 ホームへ
 </button>
 
@@ -243,7 +243,7 @@ function showReadingQuestion(q) {
             <div id="choices"></div>
 
             <p id="result"></p>
-            <button onclick="location.reload()">
+            <button onclick="showHome()">
     🌳 ホームへ
 </button>
 
@@ -515,7 +515,7 @@ const correctKanjiWithReading =
             <div class="result-buttons">
 
                 <button
-                    onclick="location.reload()"
+                    onclick="showHome()"
                 >
                     🌳 ホームへ
                 </button>
@@ -571,7 +571,7 @@ function showScore() {
             ${weakList}
 
             <button
-                onclick="location.reload()"
+                onclick="showHome()"
             >
                 🌳 ホームへ
             </button>
@@ -672,7 +672,7 @@ async function showCompareList() {
 
                 <div id="compareList"></div>
 
-                <button onclick="location.reload()">
+                <button onclick="showHme()">
                     🌳 ホームへ
                 </button>
 
@@ -767,7 +767,7 @@ function showCompareQuestion() {
             </div>
 
             <p id="result"></p>
-           <button onclick="location.reload()">
+           <button onclick="showHome()">
     🌳 ホームへ
 </button>
 
@@ -813,7 +813,7 @@ function showCompareResult() {
             <div class="result-buttons">
 
                 <button
-                    onclick="location.reload()"
+                    onclick="showHome()"
                 >
                     🌳 ホームへ
                 </button>
@@ -892,3 +892,31 @@ function checkCompareAnswer(choice, correctKanji) {
         .appendChild(nextButton);
 
 }
+// ========================
+// ホーム画面に戻る
+// ========================
+
+function showHome() {
+
+    document.body.innerHTML = `
+        <div class="container">
+            <h1>🌳 よめるん！</h1>
+            <p class="subtitle">読むことから始めよう！</p>
+
+            <button id="startBtn">▶️ はじめる</button>
+            <button id="readingBtn">🔤 漢字の読み方</button>
+            <button id="compareListBtn">📖 同じ読みの漢字を見る</button>
+            <button id="compareBtn">👀 見比べて読む</button>
+            <button id="reviewBtn">⭐ にがてだけ</button>
+            <button id="scoreBtn">📊 せいせき</button>
+        </div>
+    `;
+
+    document.getElementById("startBtn").onclick = startQuiz;
+    document.getElementById("readingBtn").onclick = startReadingQuiz;
+    document.getElementById("compareListBtn").onclick = showCompareList;
+    document.getElementById("compareBtn").onclick = startCompareQuiz;
+    document.getElementById("reviewBtn").onclick = startWeakQuiz;
+    document.getElementById("scoreBtn").onclick = showScore;
+}
+
