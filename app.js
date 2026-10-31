@@ -672,7 +672,7 @@ async function showCompareList() {
 
                 <div id="compareList"></div>
 
-                <button onclick="showHme()">
+                <button onclick="showHome()">
                     🌳 ホームへ
                 </button>
 
